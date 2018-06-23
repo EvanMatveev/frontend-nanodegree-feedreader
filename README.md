@@ -1,6 +1,6 @@
 # Project Overview
 
-This is the 4th project on the Udacity FEND track. This projects is about testing the web-based app that reeds RSS feeds and provides them as a list to display on the page. Tests are made in several suites, each of which checks for a certain element functionality. Some of the test are asynchronous and check for different states of the app.
+This is the 5th project on the Udacity FEND track. This projects is about testing the web-based app that reeds RSS feeds and provides them as a list to display on the page. Tests are made in several suites, each of which checks for a certain element functionality. Some of the test are asynchronous and check for different states of the app.
 
 ## Why this Project?
 
