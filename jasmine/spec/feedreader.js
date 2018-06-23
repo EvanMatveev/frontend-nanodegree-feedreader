@@ -4,12 +4,14 @@
  * all of the tests that will be run against your application.
  */
 
-/* We're placing all of our tests within the $() function,
+/* The tests are placed within the $() function,
  * since some of these tests may require DOM elements. We want
  * to ensure they don't run until the DOM is ready.
  */
 $(
   (function() {
+    //   Test whether the feeds are loaded without any exceptions
+
     describe("RSS Feeds", function() {
       it("are defined", function() {
         expect(allFeeds).toBeDefined();
@@ -49,6 +51,7 @@ $(
       });
     });
 
+    // Make sure at least one feed element is loaded on loadFeed() completion
     describe("Initial Entries", function() {
       beforeEach(function(done) {
         loadFeed(0, function() {
@@ -66,6 +69,8 @@ $(
       });
     });
 
+    // Make sure the content is updated when the feed source is changed
+
     describe("New Feed Selection", function() {
       let initialFeed, newFeed;
       beforeEach(function(done) {
@@ -82,6 +87,9 @@ $(
           done();
         });
       });
+
+      //   Test whether the new state is equal to the previous state
+
       it("should be different from the previous feed", function() {
         expect(initialFeed).not.toBe(newFeed);
       });
