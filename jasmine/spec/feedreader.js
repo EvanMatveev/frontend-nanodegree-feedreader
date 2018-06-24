@@ -59,12 +59,7 @@ $(
         });
       });
       it("should be within the .feed container", function(done) {
-        expect(
-          $(".feed")
-            .children("a")
-            .eq(0)
-            .hasClass("entry-link")
-        ).toBe(true);
+        expect($(".feed .entry")).toBeDefined();
         done();
       });
     });
